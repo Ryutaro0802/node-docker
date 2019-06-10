@@ -12,9 +12,11 @@ services:
     command: [sh, -c, npm install && npm start]
   api:
     image: node:10.12
+    container_name: node-api
     ports:
-      - 3000:4000
+      - 4000:4000
     working_dir:
-      /src
+      /api
     volumes:
-      - ./app:/src
+      - ./api:/api
+    command: [sh, -c, npm install && npm start]
