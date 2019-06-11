@@ -9,7 +9,7 @@ services:
       /src
     volumes:
       - ./app:/src
-    command: [sh, -c, npm install && npm start]
+    command: [sh, -c, yarn install && yarn start]
   api:
     image: node:12.4
     container_name: node-api
@@ -19,4 +19,4 @@ services:
       /api
     volumes:
       - ./api:/api
-    command: [sh, -c, npm install && npm start]
+    command: [sh, -c, yarn install && yarn start]
