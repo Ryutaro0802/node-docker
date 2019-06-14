@@ -1,21 +1,17 @@
 version: '3'
 services:
-  appBase: &appBase
+  app:
     image: node:12.4
-    tty: true
-    container_name: appBase
+    container_name: app
     environment:
       PORT: 3000
       HOST: 0.0.0.0
+    ports:
+      - "3000:3000"
     working_dir:
       /src
     volumes:
       - ./app:/src
-  app:
-    <<: *appBase
-    container_name: app
-    ports:
-      - "3000:3000"
     command: [sh, -c, yarn install && yarn dev]
   api:
     image: node:12.4
