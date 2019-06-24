@@ -1,3 +1,3 @@
 # NODE-DOCKER
 
-docker exec -it node-app bash
+docker exec -it app bash
