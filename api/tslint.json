@@ -3,7 +3,14 @@
   "rules": {
     "member-ordering": false,
     "object-literal-sort-keys": false,
-    "quotemark": [true, "single"]
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "semicolon": [
+      false,
+      "always"
+    ],
   },
   "linterOptions": {
     "exclude": [
