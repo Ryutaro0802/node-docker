@@ -27,6 +27,11 @@ import Card from "~/components/Card.vue"
 })
 export default class extends Vue {
   @State people!: Person
+
+  async created() {
+    const response = await this.$axios.$get('http://localhost:4000/api/')
+    console.log(response)
+  }
 }
 </script>
 
