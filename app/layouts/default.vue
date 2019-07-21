@@ -1,5 +1,7 @@
 <template>
-  <div>
+  <div class="wrapper">
     <nuxt/>
   </div>
 </template>
+
+<style></style>
